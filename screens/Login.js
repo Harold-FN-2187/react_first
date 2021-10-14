@@ -74,7 +74,7 @@ export default function Login({ navigation }) {
           }}
         >
           Not a Member?
-          <Text style={{ color: "orange", fontWeight: "bold" }}>Sign Up</Text>
+          <Text style={{ color: "orange", fontWeight: "100" }}>Sign Up</Text>
         </Text>
       </TouchableOpacity>
     </View>
