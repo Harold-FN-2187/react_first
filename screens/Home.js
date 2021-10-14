@@ -4,10 +4,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 export default function Home() {
-  const Categories = ["All", "Roadbike", "Mountain", "Urban"];
-  return (
+  const Categories = ["All", "Roadbike", "Mountain", "Urban", "Others +"];
+  
+
     <View
       style={{
         flex: 1,
@@ -24,7 +25,9 @@ export default function Home() {
           justifyContent: "space-between",
         }}
       >
-        <Ionicons name="ios-menu-outline" size={24} color="black" />
+        <TouchableOpacity activeOpacity={0.7}>
+          <Ionicons name="ios-menu-outline" size={24} color="black" />
+        </TouchableOpacity>
         <MaterialIcons name="motorcycle" size={24} color="black" />
         <View style={{ flexDirection: "row" }}>
           <AntDesign name="search1" size={24} color="black" />
@@ -45,6 +48,7 @@ export default function Home() {
           fontSize: 19,
           fontWeight: "bold",
           marginTop: 20,
+          marginBottom: 20,
         }}
       >
         Categories
@@ -59,7 +63,7 @@ export default function Home() {
       >
         {Categories.map((category, idx) => {
           return (
-            <TouchableOpacity key={idx} activeOpacity={0.75}>
+            <TouchableOpacity key={idx} activeOpacity={0.8}>
               <Text
                 style={{
                   color: "#a4a3a3",
